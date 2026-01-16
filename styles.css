@@ -1,0 +1,362 @@
+body.home {
+  background-image: url("https://www.cyberpunk.net/build/images/edgerunners/top/cover-desktop@1x-7e66501a.jpg");
+  background-size: cover; /* заповнює весь екран */
+  background-position: center; /* по центру */
+  background-repeat: no-repeat; /* без повторів */
+  background-attachment: fixed; /* фон не рухається при скролі */
+}
+
+.cyberpunk-title {
+    font-family: 'Orbitron', sans-serif; /* кіберпанк-шрифт */
+    font-size: clamp(32px, 6vw, 72px);
+    text-align: center;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+
+    /* Градієнт тексту */
+    background: linear-gradient(
+        90deg,
+        #00aaff 0%,   /* синій */
+        #9b00ff 50%,  /* фіолетовий */
+        #ff6a00 100%  /* оранжевий */
+    );
+    background-size: 300%;               /* розтягнення градієнта для плавного руху */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Обводка */
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6); /* тонкий контур, легке для системи */
+
+    /* Легке неонове сяйво */
+    text-shadow:
+        0 0 5px #00aaff,
+        0 0 10px #9b00ff,
+        0 0 15px #ff6a00;
+
+    /* Плавна анімація градієнта */
+    animation: neonMove 12s linear infinite;
+}
+
+/* Анімація руху градієнта */
+@keyframes neonMove {
+    0% {
+        background-position: 0%;
+        text-shadow:
+            0 0 5px #00aaff,
+            0 0 10px #9b00ff,
+            0 0 15px #ff6a00;
+    }
+    50% {
+        background-position: 100%;
+        text-shadow:
+            0 0 5px #ff6a00,
+            0 0 10px #00aaff,
+            0 0 15px #9b00ff;
+    }
+    100% {
+        background-position: 0%;
+        text-shadow:
+            0 0 5px #00aaff,
+            0 0 10px #9b00ff,
+            0 0 15px #ff6a00;
+    }
+}
+
+/* Глітч при наведенні */
+.cyberpunk-title:hover {
+    animation: glitch 0.3s infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    25% { transform: translate(1px, -1px); }
+    50% { transform: translate(-1px, 1px); }
+    75% { transform: translate(1px, 1px); }
+    100% { transform: translate(0); }
+}
+
+
+.page {
+  min-height: 100vh; /* на всю висоту вікна */
+  padding: 30px 50px;
+  background-color: rgba(0, 0, 0, 0.7); /* напівпрозоре темне */
+  box-sizing: border-box;
+  color: rgb(38, 230, 140); /* кіберпанк текст */
+  font-family: Arial, sans-serif;
+  background-image: url('your-main-bg.jpg'); /* той самий фон фото */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 20px;
+}
+
+.center {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(32px, 6vw, 50px);
+  display: flex;
+  justify-content: center; /* по горизонталі */
+  margin-top: 20px;
+  color: rgb(204, 42, 236);
+}
+
+.title {
+  text-align: center;
+  color: rgba(255, 0, 0, 0.705);
+}
+
+.minititle {
+  text-align: center;
+  color: rgba(240, 226, 40, 0.925);
+  clear: both;
+}
+
+.musicjust {
+  text-align: center;
+      font-size: clamp(10px, 6vw, 25px);
+  color: rgba(24, 231, 17, 0.925);
+  clear: both;
+}
+
+.container {
+  width: 300px; /* ширина контейнера */
+  text-align: center; /* центруємо все всередині */
+  background-color: #000000; /* фон */
+  padding: 15px; /* відступи всередині */
+  border-radius: 10px; /* закруглені кути */
+  box-shadow: 0 4px 8px rgb(38, 42, 235); /* легка тінь */
+  margin: 10px; /* відстань від інших контейнерів */
+  transition: transform ease 0.5s; /* анімація при наведенні */
+  cursor: url("icons8-cyberpunk-64.png") 10 10, pointer;
+  text-decoration: none;
+}
+
+.container:hover {
+  transform: scale(1.1); /* трохи збільшуємо при наведенні */
+}
+
+.character-img {
+  width: 100%; /* займає всю ширину контейнера */
+  display: block;
+  border-radius: 10px; /* закруглені кути картинки */
+}
+
+.nickname {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #01f7ff;
+}
+
+.characters-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.containerplaces {
+  width: 700px; /* ширина контейнера */
+  text-align: center; /* центруємо все всередині */
+  background-color: #000000; /* фон */
+  padding: 15px; /* відступи всередині */
+  border-radius: 10px; /* закруглені кути */
+  box-shadow: 0 4px 8px rgb(46, 224, 10); /* легка тінь */
+  margin: 10px; /* відстань від інших контейнерів */
+  transition: transform ease 0.5s; /* анімація при наведенні */
+  cursor: url("icons8-cyberpunk-64.png") 10 10, pointer;
+}
+
+.containerplaces:hover {
+  transform: scale(1.1); /* трохи збільшуємо при наведенні */
+}
+
+.places-img {
+  width: 100%; /* займає всю ширину контейнера */
+  display: block;
+  border-radius: 10px; /* закруглені кути картинки */
+}
+
+.place {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #01f7ff;
+}
+
+.places-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container:hover .character-img {
+  box-shadow: 0 0 15px cyan;
+}
+
+.back-link {       
+  display: inline-flex;
+  gap: 5px; /* відстань між буквами */
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #11cb30, #8e09db);
+  color: rgb(255, 0, 0);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.back-link .letter {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.back-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.back-link:hover .letter {
+  transform: rotate(-860deg);
+  color: #15ff00;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.back-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  background: radial-gradient(circle at top, #0a0a0f, #050508);
+  cursor: url("icons8-cyberpunk-64.png") 10 10, pointer;
+}
+
+/* контейнер картинки */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #00ffcc, #7a00ff);
+  padding: 2px;
+  box-shadow:
+    0 0 15px rgba(122, 0, 255, 0.6),
+    0 0 30px rgba(0, 255, 204, 0.4);
+  transition: transform 0.4s ease;
+  animation: neonPulse 3s infinite ease-in-out;
+}
+
+/* сама картинка */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+  filter: contrast(1.1) saturate(1.3);
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+/* hover-ефект */
+.gallery-item:hover {
+  transform: translateY(-8px) scale(1.03);
+  animation-play-state: paused;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: contrast(1.3) saturate(1.6) hue-rotate(10deg);
+}
+
+@keyframes neonPulse {
+  0% {
+    box-shadow:
+      0 0 12px rgba(122, 0, 255, 0.4),
+      0 0 22px rgba(0, 255, 204, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 0 20px rgba(122, 0, 255, 0.8),
+      0 0 40px rgba(0, 255, 204, 0.7);
+  }
+  100% {
+    box-shadow:
+      0 0 12px rgba(122, 0, 255, 0.4),
+      0 0 22px rgba(0, 255, 204, 0.3);
+  }
+}
+
+/* кнопка */
+.music-icon {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* базовий неон */
+.neon-icon {
+  color: #00fff7;
+  filter:
+    drop-shadow(0 0 4px #00fff7)
+    drop-shadow(0 0 8px #00fff7);
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+/* hover */
+.music-icon:hover .neon-icon {
+  transform: scale(1.15);
+  filter:
+    drop-shadow(0 0 6px #00fff7)
+    drop-shadow(0 0 14px #00fff7);
+}
+
+/* КОЛИ МУЗИКА ГРАЄ */
+.music-icon.playing .neon-icon {
+  color: #ff00ff;
+  filter:
+    drop-shadow(0 0 6px #ff00ff)
+    drop-shadow(0 0 16px #ff00ff)
+    drop-shadow(0 0 28px #ff00ff);
+}
+
+/* volume slider */
+#volume {
+  width: 80px;
+  accent-color: #ff00ff; /* працює в сучасних браузерах */
+  cursor: pointer;
+}
+
+/* плеєр */
+#music {
+  display: none;
+  height: 28px;
+}
+
+.page-image {
+  float: right;
+  width: 350px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+/* 📱 Телефони */
+@media (max-width: 768px) {
+  .page-image {
+    float: none;
+    display: block;
+    margin: 0 auto 15px;
+    width: 90%;
+    max-width: 350px;
+  }
+}

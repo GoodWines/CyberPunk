@@ -114,7 +114,7 @@ body.home {
 .musicjust {
   text-align: center;
       font-size: clamp(10px, 6vw, 25px);
-  color: rgba(24, 231, 17, 0.925);
+  color: rgb(224, 0, 253);
   clear: both;
 }
 
@@ -359,4 +359,45 @@ body.home {
     width: 90%;
     max-width: 350px;
   }
+}
+
+.cyber-music {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  border: 2px solid #00fff7;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00fff7;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.cyber-title {
+  text-align: center;
+  color: #00fff7;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00fff7;
+}
+
+.track {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #ff00ff;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+.track-name {
+  display: block;
+  color: #ff00ff;
+  margin-bottom: 14px;
+  font-size: 14px;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+audio {
+  width: 100%;
+  filter: drop-shadow(0 0 5px #00fff7);
 }
